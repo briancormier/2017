@@ -1,1 +1,9 @@
-# Functions 2017
+# Functions Website
+
+## Development
+
+To test locally:
+
+```sh
+bundle exec jekyll serve
+```

@@ -1,0 +1,7 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["prettier", "standard"],
+  "rules": {
+    "comma-dangle": "off"
+  }
+}

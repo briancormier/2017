@@ -1,0 +1,10 @@
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+
+# Build directory
+_site
+.sass-cache
+.jekyll-metadata
+.DS_Store
