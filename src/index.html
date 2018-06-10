@@ -27,6 +27,10 @@ schedule:
     end-time: "11:30am"
     summary: Something about food
     image: ahmad
+
+sponsors:
+  - name: Mr Anderson
+    image: anderson
 ---
 
 <section class="splash">
@@ -34,6 +38,8 @@ schedule:
   <p>Enabling Creativity, Exploration, Discussion and Learning for Developers creating the future of Function as a Service (FaaS) architecture.</p>
   <a class="cta" href="">Register Now</a>
 </section>
+
+<div class="stripe"></div>
 
 <section id="details">
   <h2>The Details</h2>
@@ -68,6 +74,8 @@ schedule:
   </div>
 </section>
 
+<div class="stripe"></div>
+
 <section id="schedule">
   <h2>Schedule</h2>
   <div class="details gallery schedule">
@@ -85,3 +93,16 @@ schedule:
     </ul>
   </div>
 </section>
+
+<div class="stripe"></div>
+
+<section id="sponsors">
+  <h2>Sponsoring Partners</h2>
+  <div class="details gallery">
+    {% for sponsor in page.sponsors %}
+    <img src="" alt="" />
+    {% endfor %}
+  </div>
+</section>
+
+{% include footer.html %}

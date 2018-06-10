@@ -46,6 +46,14 @@ section {
   }
 }
 
+.stripe {
+  height: 8vw;
+  min-height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='1440px' height='80px' viewBox='0 0 1440 80' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 50.2 %2855047%29 - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Welcome' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Desktop-HD' transform='translate%280.000000, -582.000000%29'%3E%3Cg id='Group-2' transform='translate%28718.761353, 622.530217%29 rotate%28-3.000000%29 translate%28-718.761353, -622.530217%29 translate%28-46.738647, 620.530217%29'%3E%3Crect id='Rectangle' fill='%23345995' x='0' y='0' width='322.129755' height='3.12109954'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23E16036' x='358.542112' y='0' width='265.783626' height='3.12109954'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23F7991C' x='688.379592' y='0' width='322.129755' height='3.12109954'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23738290' x='1043.7323' y='0' width='186.048538' height='3.12109954'%3E%3C/rect%3E%3Crect id='Rectangle' fill='%23AFAFAF' x='1297.0241' y='0' width='233.889591' height='3.12109954'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
 /**
  * SECTIONS
  */
@@ -147,6 +155,15 @@ $detailPadding: 15rem;
   }
 }
 
-// Schedule
+.footer {
+  background-color: $grey2;
 
+  .container > .row {
+    @extend .header;
 
+    .time {
+      color: #ffffff;
+    }
+  }
+
+}
