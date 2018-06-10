@@ -3,7 +3,10 @@ description: >-
   Enabling Creativity, Exploration, Discussion and Learning for Developers creating the
   future of Function as a Service (FaaS) architecture.
 date: August 25, 2017 in Toronto
-twitter: https://twitter.com/FunctionsConf
+social:
+  - url: https://twitter.com/FunctionsConf
+    alt: "FunctionsConf on Twitter"
+    icon: "icon-twitter"
 logo: /assets/logo-small.png
 schema:
   type: Something
