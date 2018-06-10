@@ -1,5 +1,5 @@
 ---
-title: home
+title: Functions17
 layout: default
 
 speakers:
@@ -35,7 +35,7 @@ sponsors:
 
 <section class="splash">
   <h1>The Serverless Conference</h1>
-  <p>Enabling Creativity, Exploration, Discussion and Learning for Developers creating the future of Function as a Service (FaaS) architecture.</p>
+  <p>{{ site.description }}</p>
   <a class="cta" href="">Register Now</a>
 </section>
 
@@ -62,14 +62,13 @@ sponsors:
   <h2>The Speakers</h2>
   <div class="details gallery">
     {% for speaker in page.speakers %}
-      <figure>
-        <img
-          src="{{ speaker.image | append: ".jpg" | prepend: site.speaker_images }}" alt="" />
-        <figcaption>
-          {{ speaker.name }}<br />
-          {{ speaker.company }}
-        </figcaption>
-      </figure>
+    <figure>
+      <img src="{{ speaker.image | append: ".jpg" | prepend: site.speaker_images }}" alt="" />
+      <figcaption>
+        {{ speaker.name }}<br />
+        {{ speaker.company }}
+      </figcaption>
+    </figure>
     {% endfor %}
   </div>
 </section>
@@ -80,7 +79,7 @@ sponsors:
   <h2>Schedule</h2>
   <div class="details gallery schedule">
     <ul>
-    {% for item in page.schedule %}
+      {% for item in page.schedule %}
       <li>
         <img src="{{ item.image | append: ".jpg" | prepend: site.speaker_images }}" alt="" />
         <div class="notes">
@@ -89,7 +88,7 @@ sponsors:
           <span class="special">{{ item.summary }}</span>
         </div>
       </li>
-    {% endfor %}
+      {% endfor %}
     </ul>
   </div>
 </section>
