@@ -15,15 +15,27 @@ speakers:
   - name: Jimmy McNimblefingers
     company: Zooblar
     image: jimmy
+
+schedule:
+  - speaker: Cheryl Boyega
+    start-time: "9:00am"
+    end-time: "10:30am"
+    summary: Something about keynotes
+    image: cheryl
+  - speaker: Ahmad Nassri
+    start-time: "10:30am"
+    end-time: "11:30am"
+    summary: Something about food
+    image: ahmad
 ---
 
-<section class="splash box2">
+<section class="splash">
   <h1>The Serverless Conference</h1>
   <p>Enabling Creativity, Exploration, Discussion and Learning for Developers creating the future of Function as a Service (FaaS) architecture.</p>
   <a class="cta" href="">Register Now</a>
 </section>
 
-<section class="box2" id="details">
+<section id="details">
   <h2>The Details</h2>
   <div class="details">
     <h3>Some heading placeholder</h3>
@@ -40,7 +52,7 @@ speakers:
   </div>
 </section>
 
-<section class="box2" id="speakers">
+<section id="speakers">
   <h2>The Speakers</h2>
   <div class="details gallery">
     {% for speaker in page.speakers %}
@@ -53,5 +65,23 @@ speakers:
         </figcaption>
       </figure>
     {% endfor %}
+  </div>
+</section>
+
+<section id="schedule">
+  <h2>Schedule</h2>
+  <div class="details gallery schedule">
+    <ul>
+    {% for item in page.schedule %}
+      <li>
+        <img src="{{ item.image | append: ".jpg" | prepend: site.speaker_images }}" alt="" />
+        <div class="notes">
+          <span class="time">{{ item.start-time }} - {{ item.end-time }}</span>
+          <span>{{ item.speaker }}</span>
+          <span class="special">{{ item.summary }}</span>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
   </div>
 </section>

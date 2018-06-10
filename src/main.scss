@@ -88,12 +88,45 @@ section {
 }
 
 $detailPadding: 15rem;
+%caption {
+  color: $grey;
+  font-size: 1.25rem;
+}
 
 .details {
   padding-left: $detailPadding;
+
+  &.schedule {
+    padding-left: $detailPadding + 0.5rem;
+
+    .notes {
+      span {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        @extend %caption;
+      }
+
+      .time {
+        font-size: 1rem;
+      }
+
+      .special {
+        color: $orange;
+        text-transform: uppercase;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 // Speakers
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -109,8 +142,11 @@ $detailPadding: 15rem;
     }
 
     figcaption {
-      color: $grey;
-      font-size: 1.25rem;
+      @extend %caption;
     }
   }
 }
+
+// Schedule
+
+
