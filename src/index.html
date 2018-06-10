@@ -1,6 +1,50 @@
 ---
 title: home
 layout: default
+
+speakers:
+  - name: Jimmy McNimblefingers
+    company: Zooblar
+    image: jimmy
+  - name: Jimmy McNimblefingers
+    company: Zooblar
+    image: jimmy
+  - name: Jimmy McNimblefingers
+    company: Zooblar
+    image: jimmy
+  - name: Jimmy McNimblefingers
+    company: Zooblar
+    image: jimmy
 ---
 
-Hello world
+<section class="splash box2">
+  <h1>The Serverless Conference</h1>
+  <p>Enabling Creativity, Exploration, Discussion and Learning for Developers creating the future of Function as a Service (FaaS) architecture.</p>
+  <a class="cta" href="">Register Now</a>
+</section>
+
+<section class="box2">
+  <h2>The Details</h2>
+  <div class="details align-to-slashes">
+    <h3>Some heading placeholder</h3>
+    <p class="small">Some heading contents</p>
+
+    <h3>Some heading placeholder</h3>
+    <p class="small">Some heading contents</p>
+
+    <h3>Some heading placeholder</h3>
+    <p class="small">Some heading contents</p>
+
+    <h3>Some heading placeholder</h3>
+    <p class="small">Some heading contents</p>
+  </div>
+</section>
+
+<section class="box2">
+  <h2>The Speakers</h2>
+  <div class="details align-to-content">
+    {% for speaker in page.speakers %}
+      Hello
+    {% endfor %}
+  </div>
+</section>

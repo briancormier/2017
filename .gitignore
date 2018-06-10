@@ -5,6 +5,7 @@ yarn-error.log
 
 # Build directory
 _site
+dist
 .sass-cache
 .jekyll-metadata
 .DS_Store
