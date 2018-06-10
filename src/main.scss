@@ -18,7 +18,8 @@
 
 // General
 
-.page-wrapper {
+section {
+  @extend .box2;
   max-width: 75rem;
   margin: 0 auto;
 }
@@ -52,6 +53,7 @@
 // Header
 
 .header {
+  @extend section;
   justify-content: space-between;
 
   .logo {
@@ -75,10 +77,40 @@
   }
 }
 
-.details {
-  padding-left: 16.6rem;
+#details {
+  .details {
+    padding-left: 16.6rem;
 
-  p {
-    margin-bottom: 1.5rem;
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+$detailPadding: 15rem;
+
+.details {
+  padding-left: $detailPadding;
+}
+
+// Speakers
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  figure {
+    margin: 0;
+    padding: 0.5rem;
+    width: 20%;
+    min-width: 14rem;
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      color: $grey;
+      font-size: 1.25rem;
+    }
   }
 }
