@@ -10,6 +10,7 @@ bundle exec jekyll serve
 
 ## Todo
 
-- make mobile site
+- ~~make mobile site~~
 - add content
 - minify CSS on build
+- make colours accessible
