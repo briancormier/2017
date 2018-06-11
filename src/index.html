@@ -92,8 +92,18 @@ schedule:
     icon: drink
 
 sponsors:
-  - name: Mr Anderson
-    image: anderson
+  - name: Amazon Web Services
+    image: aws
+  - name: Apache OpenWhisk
+    image: openwhisk
+  - name: Standard Library
+    image: stdlib
+  - name: IO Pipe
+    image: iopipe
+  - name: Microsoft Azure
+    image: microsoft
+  - name: Firebase
+    image: firebase
 ---
 
 <section class="splash">
@@ -167,9 +177,11 @@ sponsors:
 
 <section id="sponsors">
   <h2>Sponsoring Partners</h2>
-  <div class="details gallery">
+  <div class="details gallery sponsors">
     {% for sponsor in page.sponsors %}
-    <img src="" alt="" />
+    <div>
+      <img src="{{ sponsor.image | append: '.jpg' | prepend: site.sponsor_images }}" alt="sponsor.name" />
+    </div>
     {% endfor %}
   </div>
 </section>
