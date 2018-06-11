@@ -1,0 +1,5 @@
+<span class="social">
+  {% for link in site.social %}
+  <a href="{{ link.url }}" title="{{ link.alt }}">{% include {{ link.icon | append: ".svg" }} %}</a>
+  {% endfor %}
+</span>

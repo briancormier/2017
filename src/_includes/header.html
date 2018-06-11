@@ -1,12 +1,8 @@
 <header class="header row box2">
   {% include logo-dark.svg %}
   <div>
-    <span class="time">{{ site.date }}</span>
-    <span class="social">
-      {% for link in site.social %}
-      <a href="{{ link.url }}" title="{{ link.alt }}">{% include {{ link.icon | append: ".svg" }} %}</a>
-      {% endfor %}
-    </span>
+    <span class="date">{{ site.date }}</span>
+    {% include social.html %}
     <nav class="nav">
       <a href="#speakers">Speakers</a>
       <span class="separator">//</span>
