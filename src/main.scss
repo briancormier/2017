@@ -3,26 +3,9 @@
 
 @import 'normalize';
 @import 'variables';
+@import 'utilities';
 @import 'base';
 
-
-// Layout
-
-.row {
-  display: flex;
-}
-
-.box2 {
-  padding: 2rem;
-}
-
-// General
-
-section {
-  @extend .box2;
-  max-width: 75rem;
-  margin: 0 auto;
-}
 
 // Components
 
@@ -64,7 +47,8 @@ section {
   @extend section;
   justify-content: space-between;
 
-  .logo {
+  .logo-dark {
+    max-width: 100%;
     max-height: 3.75rem;
   }
 
@@ -76,6 +60,10 @@ section {
 
       &:not(:last-child) {
         margin-right: 0.5rem;
+      }
+
+      @include max-breakpoint(sm) {
+        padding: 0.5rem 0;
       }
     }
 
@@ -95,10 +83,19 @@ section {
     color: $blue;
     text-transform: uppercase;
     font-size: 1.5rem;
+
+    @include max-breakpoint(sm) {
+      padding-left: 0;
+    }
   }
 
   .nav {
     margin-top: 0.75rem;
+    min-width: 30rem;
+
+    @include max-breakpoint(sm) {
+      min-width: auto;
+    }
   }
 }
 

@@ -1,0 +1,36 @@
+// Layout
+
+$breakpoints: (
+  xs: 30rem, // 480
+  sm: 48rem, // 768
+  md: 62rem, // 992
+  lg: 75rem, // 1200
+  xl: 87rem // 1392
+);
+
+@each $point, $width in $breakpoints {
+  @media (max-width: $width) {
+    .hide-#{$point} {
+      display: none !important;
+    }
+  }
+}
+
+@mixin max-breakpoint($point) {
+  @media (max-width: map-get($breakpoints, $point)) {
+    @content
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box2 {
+  padding: 2rem;
+
+  @include max-breakpoint(sm) {
+    padding: 1rem;
+  }
+}
