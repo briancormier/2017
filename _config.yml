@@ -11,6 +11,7 @@ logo: /assets/logo-small.png
 schema:
   type: Something
   url: functions.world
+registration: https://www.eventbrite.com/e/functions17-tickets-35394300305
 
 assets_url: /assets
 speaker_images: /assets/speakers/

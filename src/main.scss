@@ -103,6 +103,10 @@
       min-width: auto;
     }
   }
+
+  .cta {
+    line-height: 1.6;
+  }
 }
 
 .splash {
@@ -245,6 +249,7 @@ $detailPadding: 15rem;
 
     .date {
       @extend %date;
+      padding-left: 0;
       color: #ffffff;
     }
   }

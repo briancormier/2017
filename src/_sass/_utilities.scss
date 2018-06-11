@@ -27,6 +27,11 @@ $breakpoints: (
   flex-wrap: wrap;
 }
 
+.column {
+  @extend .row;
+  flex-direction: column;
+}
+
 .box2 {
   padding: 2rem;
 
