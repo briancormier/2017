@@ -124,6 +124,10 @@ $detailPadding: 15rem;
 .details {
   padding-left: $detailPadding;
 
+  @include max-breakpoint(md) {
+    padding-left: 0 !important;
+  }
+
   &.schedule {
     padding-left: $detailPadding + 0.5rem;
 

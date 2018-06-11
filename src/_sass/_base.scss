@@ -39,22 +39,26 @@ h1 {
   color: $grey;
 
   @include max-breakpoint(md) {
-    font-size: 3.25rem;
+    font-size: 2rem;
   }
 }
 h2 {
   font-size: 2.8125rem;
   color: $orange;
 
-  @include max-breakpoint(md) {
-    font-size: 2rem;
-  }
-
   &::after {
     content: '//';
     color: $grey;
     font-size: 4rem;
     margin-left: 0.5rem;
+  }
+
+  @include max-breakpoint(md) {
+    font-size: 1.5rem;
+
+    &::after {
+      font-size: 2rem;
+    }
   }
 }
 h3 {
