@@ -119,6 +119,10 @@ $detailPadding: 15rem;
 %caption {
   color: $grey;
   font-size: 1.25rem;
+
+  @include max-breakpoint(sm) {
+    font-size: 1rem;
+  }
 }
 
 .details {
@@ -130,6 +134,28 @@ $detailPadding: 15rem;
 
   &.schedule {
     padding-left: $detailPadding + 0.5rem;
+
+    ul {
+      width: 100%;
+    }
+    li {
+      display: flex;
+      clear: left;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      float: left;
+      width: 7.5rem;
+      height: 7.5rem;
+      margin-right: 1rem;
+
+      @include max-breakpoint(sm) {
+        width: 5.5rem;
+        height: 5.5rem;
+      }
+    }
 
     .notes {
       span {

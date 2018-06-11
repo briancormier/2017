@@ -32,16 +32,64 @@ speakers:
     image: daniel
 
 schedule:
-  - speaker: Cheryl Boyega
-    start-time: "9:00am"
-    end-time: "10:30am"
-    summary: Something about keynotes
-    image: cheryl
+  - speaker: Doors Open &amp; Breakfast
+    start-time: "9:00 AM"
+    end-time: "10:30 AM"
+    icon: coffee
   - speaker: Ahmad Nassri
-    start-time: "10:30am"
-    end-time: "11:30am"
-    summary: Something about food
+    start-time: "9:50 AM"
+    end-time: "11:30 AM"
+    summary: Kickoff &amp; Opening Notes
     image: ahmad
+  - speaker: Kassandra Perch
+    start-time: "10:00 AM"
+    end-time: "11:30 AM"
+    summary: "FaaS tooling: Where we're at &amp; signs of change"
+    image: kassandra
+  - speaker: Keith Horwood
+    start-time: "10:45 AM"
+    end-time: "11:30 AM"
+    summary: "Functions-first development: Introduction to FaaSland"
+    image: keith
+  - speaker: Joe Raio
+    start-time: "11:30 AM"
+    end-time: "11:30am"
+    summary: Building Serverless Applications on Azure
+    image: joe
+  - start-time: "12:15 PM"
+    end-time: "11:30am"
+    summary: Lunch Break
+    icon: lunch
+  - speaker: Chris Munns
+    start-time: "01:00 PM"
+    end-time: "11:30am"
+    summary: Twelve Factor Serverless Applications
+    image: chris
+  - speaker: Adib Saikali &amp; Stuart Charlton
+    start-time: "01:45 AM"
+    end-time: "11:30am"
+    summary: Spring Cloud Functions &amp; Infrastructure Consumption
+    image: adib
+  - start-time: "02:30 PM"
+    end-time: "11:30am"
+    summary: Break + Lightning Talks
+    icon: coffee
+  - speaker: Daniel Krook
+    start-time: "02:45 PM"
+    end-time: "11:30am"
+    summary: Building serverless applications with Apache OpenWhisk
+    image: daniel
+  - speaker: Sandeep Dinesh
+    start-time: "03:30 PM"
+    end-time: "11:30am"
+    summary: "Serverless Peanut Butter and Jelly: GCP &amp; Firebase"
+    image: sandeep
+  - summary: "Panel: A Serverless World!"
+    start-time: "04:15 PM"
+    icon: comments
+  - summary: Networking &amp; Drinks
+    start-time: "05:00 PM"
+    icon: drink
 
 sponsors:
   - name: Mr Anderson
@@ -96,7 +144,14 @@ sponsors:
     <ul>
       {% for item in page.schedule %}
       <li>
-        <img src="{{ item.image | append: ".jpg" | prepend: site.speaker_images }}" alt="" />
+        {% if item.icon %}
+        {% assign ext = '.svg' %}
+        {% assign pic = item.icon %}
+        {% else %}
+        {% assign ext = '.jpg' %}
+        {% assign pic = item.image %}
+        {% endif %}
+        <img src="{{ pic | append: ext | prepend: site.speaker_images }}" alt="" />
         <div class="notes">
           <span class="time">{{ item.start-time }} - {{ item.end-time }}</span>
           <span>{{ item.speaker }}</span>
