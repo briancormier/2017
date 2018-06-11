@@ -165,9 +165,19 @@ $detailPadding: 15rem;
 
   figure {
     margin: 0;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 20%;
-    min-width: 14rem;
+    min-width: 9rem;
+
+    @include max-breakpoint(md) {
+      min-width: auto;
+    }
+    @include max-breakpoint(sm) {
+      width: calc(33% - 2rem);
+    }
+    @include max-breakpoint(xs) {
+      width: calc(50% - 2rem);
+    }
 
     img {
       width: 100%;
@@ -175,6 +185,10 @@ $detailPadding: 15rem;
 
     figcaption {
       @extend %caption;
+
+      @include max-breakpoint(sm) {
+        font-size: 1rem;
+      }
     }
   }
 }
