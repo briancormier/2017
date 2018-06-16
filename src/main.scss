@@ -30,6 +30,7 @@
 }
 
 .stripe {
+  @extend section;
   height: 8vw;
   min-height: 80px;
   background-size: contain;
