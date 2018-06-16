@@ -17,8 +17,5 @@ assets_url: /assets
 speaker_images: /assets/speakers/
 sponsor_images: /assets/sponsors/
 
-baseurl: ""
-url: ""
-source: src
-destination: dist
+url: https://2017.functions.world
 markdown: kramdown
